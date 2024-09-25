@@ -23,6 +23,7 @@ def speech_to_text():
             audio = r.listen(source)   
             MyText = r.recognize_google(audio)
             MyText = MyText.lower()
+            return MyText
 
     except sr.RequestError as e:
             print("Could not request results; {0}".format(e))
